@@ -13,6 +13,11 @@ CREATE TABLE products (
     price NUMERIC(10,2) CHECK (price >= 0)
 );
 
+INSERT INTO products (id, title, description, price) VALUES
+('7acad0f6-fef8-412f-856b-d961bd1832d8', 'Caramel Fudge', 'Soft and chewy caramel fudge with a hint of sea salt.', 4.99),
+('5cb3e78f-f6cb-432b-b0fe-6861f17103c7', 'Samsung Galaxy S24 Ultra', 'Latest Samsung flagship with AI features', 105),
+('2d18fc6c-4f5d-4e96-94a1-dfd75f1a93e8', 'DJI Mini 3 Pro', 'Compact drone with 4K camera', 99);
+
 CREATE TABLE cart_items (
     cart_id UUID NOT NULL REFERENCES carts(id) ON DELETE CASCADE,
     product_id UUID NOT NULL,

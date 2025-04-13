@@ -8,9 +8,11 @@ import { CartItem } from './entities/cart-item.entity';
 import { Cart } from './entities/cart.entity';
 import { Order } from './entities/order.entity';
 import { Product } from './entities/product.entity';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     AuthModule, 
     CartModule, 
     OrderModule, 
